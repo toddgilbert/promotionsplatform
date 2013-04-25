@@ -1,6 +1,7 @@
 <!-- Begin the Voter's Choice Application -->
 <div id="ssPromotion" class="ssPromotion ssVotersChoice ssAestheticsOn">
 	<code id="ssApplicationResources">
+		
 		<!-- Voter's Choice Stylesheets -->	    
 	    <link rel="stylesheet" href="../../Content/jquery-ui.css" />
 	    <link rel="stylesheet/less" type="text/css" href="../../Content/bundler.less?v=10" />
@@ -82,7 +83,17 @@
 	    <!--With our class-->
 	    <!--<script src="../../Scripts/modernizr.custom.68940.js"></script>-->
 	    [$JavaScriptContent]
-		<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=111413455542870"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "facebook-jssdk"));</script>
+	    
+		<!-- Get Facebook's API -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
 	</code>
 	
 	<div id="ssApplicationContainer">
